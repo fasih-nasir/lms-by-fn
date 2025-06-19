@@ -1,10 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Noto+Naskh+Arabic:wght@400..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
 /********** Template CSS **********/
 :root {
     --primary: #06BBCC;
     --light: #F0FBFC;
     --dark: #181d38;
-}
+    --font-family-Nunito: "Nunito", sans-serif;
 
+}
+body{
+    font-family: var(--font-family-Nunito) !important;
+}
 .fw-medium {
     font-weight: 600 !important;
 }
@@ -39,7 +45,7 @@
 
 /*** Button ***/
 .btn {
-    font-family: 'Nunito', sans-serif;
+   
     font-weight: 600;
     transition: .5s;
 }
