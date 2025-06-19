@@ -4,32 +4,29 @@ var login_form=document.getElementById("login_form");
 login_form.onsubmit =  (e)=>{
 e.preventDefault();
 
+    
+fetch("https://opensheet.elk.sh/11XqUvEZ55DBXtJLtaR0xe_ScGPA8c2HrkTdDoGhfpCw/Sheet1")
+  .then(res => res.json())
+  .then((data) =>{
+ data.forEach(element => {
+       
+        if(element.Role === "Admin"){
+            
+            location.href="../pages/dashboard.html";
+            
+        }
+        else{
+                   
 
-for (let index = 0; index < e.target.length; index++) {
-    console.log( e.target[index].value);
+            
+        }
+        
+    });
+  });
     
-    
-}
 
 
 // console.log(e.srcElement);
 
 
 }
-
-// =========== LOGIN FORM END =========================
-// google sheets dependent dropdown list
-
-// google sheets filter data based on dropdown
-
-// google sheets class student dropdown filter
-
-// google sheets dynamic dropdown based on another cell
-
-// google sheets FILTER formula tutorial
-
-// google sheets QUERY formula tutorial
-
-// google sheets linked dropdowns tutorial
-
-// google sheets show data based on dropdown selection
